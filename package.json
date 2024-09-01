@@ -1,0 +1,28 @@
+{
+  "name": "hapi-js-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon ./src/index",
+    "start": "node ./src/index",
+    "mongo-start": "docker run -d -p 27017:27017 --name my-mongo -v mongo-data:/data/db mongo",
+    "mongo-stop": "docker stop my-mongo",
+    "mongo-remove": "docker rm -f my-mongo"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/hapi": "^21.3.10",
+    "@hapi/inert": "^7.1.0",
+    "@hapi/vision": "^7.0.3",
+    "dotenv": "^16.4.5",
+    "handlebars": "^4.7.8"
+  },
+  "devDependencies": {
+    "@hapi/lab": "^25.3.1",
+    "nodemon": "^3.1.4"
+  }
+}
