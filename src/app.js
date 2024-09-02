@@ -16,7 +16,7 @@ let __dirname = Path.dirname(fileURLToPath(import.meta.url))
 
 // Create app
 const app = Hapi.Server({
-  port: process.env.PORT || 3000,
+  autoListen: false,
   routes: {
     files: {
       relativeTo: Path.join(__dirname, 'assets')
@@ -39,6 +39,7 @@ app.views({
   layoutPath: 'views/layout',
   layoutKeyword: 'body'
 });
+
 
 app.state('session', {
   ttl: 24 * 60 * 60 * 1000,     // One day
@@ -63,4 +64,3 @@ app.events.on({ name: 'request', channels: 'internal' }, (request, event, tags) 
 await app.initialize()
 
 export default app
-

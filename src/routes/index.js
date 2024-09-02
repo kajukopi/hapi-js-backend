@@ -23,28 +23,28 @@ export const staticfile = {
 
 export const CREATE = {
   method: 'POST', path: '/api/{collection}', handler: async (request, h) => {
-    console.log(request.params.id);
+    // console.log(request.params.id);
     return h.json({ status: true })
   }
 }
 
 export const READ = {
   method: 'GET', path: '/api/{collection}/{id}', handler: async (request, h) => {
-    console.log(request.params.id);
+    // console.log(request.params.id);
     return h.json({ status: true })
   }
 }
 
 export const UPDATE = {
   method: 'PUT', path: '/api/{collection}/{id}', handler: async (request, h) => {
-    console.log(request.params.id);
+    // console.log(request.params.id);
     return h.json({ status: true })
   }
 }
 
 export const DELETE = {
   method: 'DELETE', path: '/api/{collection}/{id}', handler: async (request, h) => {
-    console.log(request.params.id);
+    // console.log(request.params.id);
     return h.json({ status: true })
   }
 }
